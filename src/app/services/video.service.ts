@@ -32,10 +32,10 @@ export class VideoService {
         return url
     }
 
-    search(query: string): Observable<Object> {
-        // console.log(this.parseVideo(query))
-        let idLenght = this.parseVideo(query).length
-        if (idLenght > 9) {
+
+
+    search(query: string): any {
+        if (this.parseVideo(query).length > 9) {
             const YOUTUBE_API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
             const YT_Url = "https://www.googleapis.com/youtube/v3/videos?id=" + this.parseVideo(query) + "&key=" + YOUTUBE_API_KEY + "&part=snippet,statistics&fields=items(id,snippet,statistics)"
             return this.httpClient.get(YT_Url)
