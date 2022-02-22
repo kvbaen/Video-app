@@ -23,7 +23,7 @@ export class VideoService {
     search(query: string): any {
         console.log(this.parseVideo(query))
         if (this.parseVideo(query).length > 9) {
-            const YOUTUBE_API_KEY = 'AIzaSyChhitqOkKyzlxJqtnKM2mFuEQ6hAY5gj8'
+            const YOUTUBE_API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
             const YT_Url = "https://www.googleapis.com/youtube/v3/videos?id=" + this.parseVideo(query) + "&key=" + YOUTUBE_API_KEY + "&part=snippet,statistics&fields=items(id,snippet,statistics)"
             return this.httpClient.get(YT_Url)
         }
