@@ -5,8 +5,7 @@ import { Video } from 'src/app/models/video.model';
 
 @Component({
   selector: 'app-video-dialog-player',
-  templateUrl: './video-dialog-player.component.html',
-  styleUrls: ['./video-dialog-player.component.sass']
+  templateUrl: './video-dialog-player.component.html'
 })
 export class VideoDialogPlayerComponent implements OnInit {
   url?: SafeResourceUrl;
